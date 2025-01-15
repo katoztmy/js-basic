@@ -445,3 +445,18 @@ obj.b = 2;
 // }
 
 // JavaScriptでメモリを書き換える方法
+
+// let buffer = new ArrayBuffer(16);
+// console.log(buffer);
+
+// const a = new URL(
+//   'https://astropad.com/blog/ipad%E3%81%AE%E3%81%8A%E3%81%99%E3%81%99%E3%82%81%E3%83%8E%E3%83%BC%E3%83%88%E3%82%A2%E3%83%97%E3%83%AA5%E9%81%B8%E3%80%902024%E5%B9%B4%E3%80%91/'
+// );
+
+// console.log(a);
+
+let timerId = setTimeout(() => {
+  console.log('konnitiha');
+}, 1000);
+clearTimeout(timerId);
+console.log('apple');
