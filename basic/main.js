@@ -461,7 +461,26 @@ obj.b = 2;
 // clearTimeout(timerId);
 // console.log('apple');
 
-let timerId = setInterval(() => {
-  console.log('konnitiha');
-}, 1000);
-clearInterval(timerId);
+// let timerId = setInterval(() => {
+//   console.log('konnitiha');
+// }, 1000);
+// clearInterval(timerId);
+
+// let result = document.documentElement;
+// result = document.head;
+// result = document.body;
+// console.log(result);
+
+// XSS
+// 第三者が悪意を持ってスクリプトを埋め込むことで、ユーザーの情報を盗むことができる
+// let userUnput = '初めての投稿';
+// document.body.innerHTML = userUnput;
+// userUnput = '<script>alert(`unko`)</script>';
+// document.body.innerHTML = userUnput;
+// userUnput = '<img src="unko" onerror="alert(`unko`)">';
+// document.body.innerHTML = userUnput;
+
+const button = document.querySelector('button');
+button.addEventListener('click', (event) => {
+  console.log(event);
+});
