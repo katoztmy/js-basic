@@ -455,8 +455,13 @@ obj.b = 2;
 
 // console.log(a);
 
-let timerId = setTimeout(() => {
+// let timerId = setTimeout(() => {
+//   console.log('konnitiha');
+// }, 1000);
+// clearTimeout(timerId);
+// console.log('apple');
+
+let timerId = setInterval(() => {
   console.log('konnitiha');
 }, 1000);
-clearTimeout(timerId);
-console.log('apple');
+clearInterval(timerId);
