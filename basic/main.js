@@ -480,7 +480,30 @@ obj.b = 2;
 // userUnput = '<img src="unko" onerror="alert(`unko`)">';
 // document.body.innerHTML = userUnput;
 
-const button = document.querySelector('button');
-button.addEventListener('click', (event) => {
-  console.log(event);
+// const input = document.querySelector('input');
+// input.addEventListener('input', () => {
+//   console.log('input from input');
+// });
+
+// document.body.addEventListener('input', () => {
+//   console.log('input from body');
+// });
+
+// document.addEventListener('input', () => {
+//   console.log('input from document');
+// });
+
+// window.addEventListener('input', () => {
+//   console.log('input from window');
+// });
+
+// navigator.geolocation.getCurrentPosition((position) => {
+//   console.log(position);
+// });
+
+// new Promiseされた瞬間にconsole.logが実行される
+let promise = new Promise((yeah, wow) => {
+  wow('eee');
+  console.log('new promise');
 });
+
