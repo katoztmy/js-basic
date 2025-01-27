@@ -502,8 +502,50 @@ obj.b = 2;
 // });
 
 // new Promiseされた瞬間にconsole.logが実行される
-let promise = new Promise((yeah, wow) => {
-  wow('eee');
-  console.log('new promise');
+// let promise = new Promise((yeah, wow) => {
+//   wow('eee');
+//   console.log('new promise');
+// });
+
+// promise = new Promise((resolve, reject) => {
+//   let tmpPromise = new Promise((resolve2) => {
+//     setTimeout(() => {
+//       resolve2('hello');
+//     }, 1000);
+//   });
+//   resolve(tmpPromise);
+// });
+
+promise = new Promise((resolve, reject) => {
+  let thenableObj = {
+    then(resolve2, reject2) {
+      () => {
+
+      };
+    },
+  };
 });
 
+// promise = new Promise((resolve, reject) => {
+//   reject(new Error('error'));
+// });
+
+promise.then(
+  (value) => {
+    console.log('fullfilled', value);
+  },
+  () => {
+    console.log('rejcted', value);
+  }
+);
+// promise.catch((error) => {
+//   console.log('catch', error);
+// });
+
+// finallyは第一引数に値は取らない
+promise.finally((value) => {
+  console.log('finally', value);
+});
+console.log(promise);
+
+new Promise ((resolve) => resolve(1).then(()))
