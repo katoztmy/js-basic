@@ -511,41 +511,53 @@ obj.b = 2;
 //   let tmpPromise = new Promise((resolve2) => {
 //     setTimeout(() => {
 //       resolve2('hello');
-//     }, 1000);
-//   });
-//   resolve(tmpPromise);
-// });
-
-promise = new Promise((resolve, reject) => {
-  let thenableObj = {
-    then(resolve2, reject2) {
-      () => {
-
-      };
-    },
-  };
-});
+// //     }, 1000);
+// //   });
+// //   resolve(tmpPromise);
+// // });
 
 // promise = new Promise((resolve, reject) => {
-//   reject(new Error('error'));
+//   let thenableObj = {
+//     then(resolve2, reject2) {
+//       () => {
+
+//       };
+//     },
+//   };
 // });
 
-promise.then(
-  (value) => {
-    console.log('fullfilled', value);
-  },
-  () => {
-    console.log('rejcted', value);
-  }
-);
-// promise.catch((error) => {
-//   console.log('catch', error);
+// // promise = new Promise((resolve, reject) => {
+// //   reject(new Error('error'));
+// // });
+
+// promise.then(
+//   (value) => {
+//     console.log('fullfilled', value);
+//   },
+//   () => {
+//     console.log('rejcted', value);
+//   }
+// );
+// // promise.catch((error) => {
+// //   console.log('catch', error);
+// // });
+
+// // finallyは第一引数に値は取らない
+// promise.finally((value) => {
+//   console.log('finally', value);
+// });
+// console.log(promise);
+
+// // new Promise ((resolve) => resolve(1).then(()))
+// let json = '[{"name": "Tom", "age": 29}]';
+// fetch('https://jsonplaceholder.typicode.com/posts', {
+//   method: 'POST',
+//   body: json,
+//   headers: {
+//     // 'Content-Type': 'application/json',
+//   },
 // });
 
-// finallyは第一引数に値は取らない
-promise.finally((value) => {
-  console.log('finally', value);
-});
-console.log(promise);
-
-new Promise ((resolve) => resolve(1).then(()))
+// result = JSON.parse(json);
+// console.log(result);
+// console.log(JSON.stringify(result));
